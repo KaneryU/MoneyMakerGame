@@ -18,12 +18,13 @@ int main()
     // declare variables
     string commands, yesorno;
     int forever, money, moneyPerTurn, buffs;
-    for (int fora = 0; fora = 1;) {
+    forever = 0;
+    while (forever == 0) {
         cin >> commands;
         cout << commands << " Is that correct? yes or no" << endl;
         cin >> yesorno;
         if (yesorno == "yes" || yesorno == "Yes") {
-            fora = 1;
+            forever = 1;
         } else if(yesorno == "no" || yesorno == "No") {
             cout << "Enter yes or no." << endl;
         } else {
@@ -31,4 +32,6 @@ int main()
         }
         
     }
+    forever = 0;
+    return 0;
 }
