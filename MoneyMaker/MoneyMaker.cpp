@@ -6,24 +6,26 @@
 #include <fstream>
 using namespace std;
 
-void clrScr() { for (int i = 0; i > 30; i++) { cout << "" << endl; } } // Single line clear screen script
+void clrScr() { 
+    for (int i = 0; i < 30; i++) { cout << "" << endl; }
+}
 
 void helpMessages() {
     clrScr();
     cout << "Welcome to the Help Menu" << endl;
     int command, forever;
     forever = 1;
-    while (forever = 1) {
+    while (forever == 1) {
 
-        cout << "Enter what you want help with:\n1: All Commands\n2: Getting Started\n3: Saving/Loading\n4: Exit" << endl;
+        cout << "\n\n\nEnter what you want help with:\n1: All Commands\n2: Getting Started\n3: Saving/Loading\n4: Exit" << endl;
         cin >> command;
 
         switch (command) {
         case 1:
-            cout << "Commands: \n!save\n!exit" << endl;
+            cout << "Commands: \n!save\n!exit\n!jobs" << endl;
             break;
         case 2:
-            cout << "PLAC" << endl;
+            cout << "To start, Get a job." << endl;
             break;
         case 3:
             cout << "SAEW" << endl;
@@ -73,12 +75,18 @@ int main() {
             if (yesorno == "yes" || yesorno == "Yes") {
                 allowSave = true;
             }else if (yesorno == "no" || yesorno == "No") {
-                while (forever = 0) {
+                while (forever == 0) {
                     cout << "Enter a command or enter !help for help.   ";
                     cin >> command;
                     clrScr();
                     if (command == "!help") {
                         helpMessages();
+                    } else if (command == "!exit") {
+                        cout << "\n\n\n\n\n EXITING!";
+                        return 0;
+                    } else if (command == "!jobs") {
+                        cout << "Looking for a job!" << endl;
+                        
                     }
 
 
